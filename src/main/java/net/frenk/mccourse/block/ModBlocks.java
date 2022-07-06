@@ -63,6 +63,25 @@ public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlock("
             ()-> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,BlockBehaviour.Properties.of(Material.METAL)
                     .strength(4f).requiresCorrectToolForDrops()), ModCreativeModTab.COURSE_TAB);
 
+    public static final RegistryObject<Block>COBALT_FENCE = registerBlock("cobalt_fence",
+            ()-> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModTab.COURSE_TAB);
+
+    public static final RegistryObject<Block>COBALT_FENCE_GATE = registerBlock("cobalt_fence_gate",
+            ()-> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModTab.COURSE_TAB);
+
+    public static final RegistryObject<Block>COBALT_WALL = registerBlock("cobalt_wall",
+            ()-> new WallBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModTab.COURSE_TAB);
+
+    public static final RegistryObject<Block>CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door",
+            ()-> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(4f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModTab.COURSE_TAB);
+
+    public static final RegistryObject<Block>CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
+            ()-> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(4f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModTab.COURSE_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                      CreativeModeTab tab, String tooltipKey){
