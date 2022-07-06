@@ -11,7 +11,10 @@
   "block.mccourse.raw_cobalt_block": "Raw Cobalt Block",
   "block.mccourse.speedy_block": "Speedy Block",
   "block.mccourse.cobalt_stairs": "Cobalt Stairs",
-  "block.mccourse.cobalt_slab": "Cobalt slab",
+  "block.mccourse.cobalt_slab": "Cobalt Slab",
+  "block.mccourse.cobalt_button": "Cobalt Button",
+  "block.mccourse.cobalt_pressure_plate": "Cobalt Pressure Plate",
+
 
 
   "item.mccourse.dowsing_rod_no_valuables": "No Valuables Found",
