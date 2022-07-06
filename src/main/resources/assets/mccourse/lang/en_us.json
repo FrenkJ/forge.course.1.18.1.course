@@ -15,6 +15,8 @@
 
 
   "itemGroup.coursemodtab": "MCCourse Mod",
-
+ "tooltip.mccourse.dowsing_rod.tooltip.shift": "Right Click To Find Valuables",
+ "tooltip.mccourse.dowsing_rod.tooltip": "Press §eSHIFT§r for more Information",
+  "tooltip.block.speedy_block": " It gets REALLY speedy!"
 
 }

@@ -2,6 +2,7 @@ package net.frenk.mccourse;
 
 import net.frenk.mccourse.block.ModBlocks;
 import net.frenk.mccourse.item.Moditems;
+import net.frenk.mccourse.util.ModTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +36,9 @@ public class MCCourseMOD {
 
         Moditems.register(eventbus);
         ModBlocks.register(eventbus);
+
+
+        ModTags.register();
 
         eventbus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
