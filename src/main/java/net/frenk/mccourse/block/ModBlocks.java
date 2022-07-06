@@ -9,6 +9,8 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -45,6 +47,14 @@ public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlock("
             ()-> new SpeedyBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(2f).requiresCorrectToolForDrops()),ModCreativeModTab.COURSE_TAB, "tooltip.block.speedy_block");
 
+    public static final RegistryObject<Block>COBALT_STAIRS = registerBlock("cobalt_stairs",
+            ()-> new StairBlock(() -> ModBlocks.COBALT_BLOCK.get().defaultBlockState()
+                    ,BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModTab.COURSE_TAB);
+
+    public static final RegistryObject<Block>COBALT_SLAB = registerBlock("cobalt_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModTab.COURSE_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
