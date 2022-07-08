@@ -1,6 +1,7 @@
 package net.frenk.mccourse.block;
 
 import net.frenk.mccourse.MCCourseMOD;
+import net.frenk.mccourse.block.custom.CobaltLampBlock;
 import net.frenk.mccourse.block.custom.SpeedyBlock;
 import net.frenk.mccourse.item.ModCreativeModTab;
 import net.frenk.mccourse.item.Moditems;
@@ -82,6 +83,12 @@ public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlock("
     public static final RegistryObject<Block>CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
             ()-> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(4f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModTab.COURSE_TAB);
+
+    public static final RegistryObject<Block>COBALT_LAMP = registerBlock("cobalt_lamp",
+            ()-> new CobaltLampBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f).requiresCorrectToolForDrops().lightLevel
+                            ((state) -> state.getValue(CobaltLampBlock.CLICKED)? 15 : 0))
+            , ModCreativeModTab.COURSE_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                      CreativeModeTab tab, String tooltipKey){

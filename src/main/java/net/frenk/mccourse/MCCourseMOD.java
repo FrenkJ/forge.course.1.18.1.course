@@ -1,6 +1,7 @@
 package net.frenk.mccourse;
 
 import net.frenk.mccourse.block.ModBlocks;
+import net.frenk.mccourse.enchantment.ModEnchantments;
 import net.frenk.mccourse.item.Moditems;
 import net.frenk.mccourse.util.ModTags;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -40,6 +41,7 @@ public class MCCourseMOD {
         Moditems.register(eventbus);
         ModBlocks.register(eventbus);
 
+        ModEnchantments.register((eventbus));
 
         ModTags.register();
 

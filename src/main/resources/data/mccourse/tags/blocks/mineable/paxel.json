@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values" : [
+    "#minecraft:mineable/mineable/pickaxe",
+    "#minecraft:mineable/mineable/axe",
+    "#minecraft:mineable/mineable/shovel"
+  ]
+}
