@@ -1,6 +1,7 @@
 package net.frenk.mccourse.item;
 
 import net.frenk.mccourse.MCCourseMOD;
+import net.frenk.mccourse.block.custom.DataTabletItem;
 import net.frenk.mccourse.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -72,6 +73,8 @@ public class Moditems {
             () -> new HorseArmorItem(12, "cobalt",
                     new Item.Properties().tab(ModCreativeModTab.COURSE_TAB)));
 
+    public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
+            () -> new DataTabletItem(new Item.Properties().tab(ModCreativeModTab.COURSE_TAB).stacksTo(1)));
 
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
