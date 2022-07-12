@@ -7,6 +7,7 @@ import net.frenk.mccourse.item.ModCreativeModTab;
 import net.frenk.mccourse.item.Moditems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
@@ -89,6 +90,14 @@ public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlock("
                     .strength(4f).requiresCorrectToolForDrops().lightLevel
                             ((state) -> state.getValue(CobaltLampBlock.CLICKED)? 15 : 0))
             , ModCreativeModTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> PINK_ROSE = registerBlock("pink_rose",
+            () -> new FlowerBlock(MobEffects.BLINDNESS, 4,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> POTTED_PINK_ROSE = BLOCKS.register("potted_pink_rose",
+            () -> new FlowerPotBlock(null, ModBlocks.PINK_ROSE,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                      CreativeModeTab tab, String tooltipKey){

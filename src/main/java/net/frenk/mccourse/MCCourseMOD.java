@@ -3,11 +3,14 @@ package net.frenk.mccourse;
 import net.frenk.mccourse.block.ModBlocks;
 import net.frenk.mccourse.enchantment.ModEnchantments;
 import net.frenk.mccourse.item.Moditems;
+import net.frenk.mccourse.sound.ModSounds;
+import net.frenk.mccourse.util.ModItemProperties;
 import net.frenk.mccourse.util.ModTags;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,6 +45,7 @@ public class MCCourseMOD {
         ModBlocks.register(eventbus);
 
         ModEnchantments.register((eventbus));
+        ModSounds.register(eventbus);
 
         ModTags.register();
 
@@ -58,11 +62,17 @@ public class MCCourseMOD {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_DOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_TRAPDOOR.get(), RenderType.cutout());
 
+        ModItemProperties.addCustomItemProperties();
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_ROSE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
     }
     private void setup(final FMLCommonSetupEvent event) {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
+        ((FlowerPotBlock)Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ROSE.getId(), ModBlocks.POTTED_PINK_ROSE);
+
     }
 }
 

@@ -15,7 +15,7 @@
   "item.mccourse.cobalt_leggings": "Cobalt Leggings",
   "item.mccourse.cobalt_boots": "Cobalt Boots",
   "item.mccourse.cobalt_horse_armor": "Cobalt Horse Armor",
-
+  "item.mccourse.data_tablet": "Data Tablet",
 
 
 
@@ -34,7 +34,8 @@
   "block.mccourse.cherry_blossom_door": "Cherry Blossom Door",
   "block.mccourse.cherry_blossom_trapdoor": "Cherry Blossom Trapdoor",
   "block.mccourse.cobalt_lamp": "Cobalt Lamp",
-
+  "block.mccourse.pink_rose": "Pink Rose",
+  "block.mccourse.potted_pink_rose": "Potted Pink Rose",
 
   "item.mccourse.dowsing_rod_no_valuables": "No Valuables Found",
 
@@ -45,6 +46,7 @@
   "tooltip.block.speedy_block": " It gets REALLY speedy!",
 
 
-  "enchantment.mccourse.lightning_striker":"Lightning Striker"
+  "enchantment.mccourse.lightning_striker":"Lightning Striker",
+  "sounds.mccourse.dowsing_rod_found_ore": "Dowsing Rod Sound"
 
 }
